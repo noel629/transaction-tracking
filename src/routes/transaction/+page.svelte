@@ -63,7 +63,6 @@
                 {/each}
             </TableBody>
         </Table>
-        >>>>>>> b76d1aa (Initial Commit)
 
         <div class="ml-2">
             <span class="text-xs"
