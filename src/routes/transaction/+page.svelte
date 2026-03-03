@@ -1,14 +1,41 @@
 <script lang="ts">
+<<<<<<< HEAD
     import { Button } from "flowbite-svelte";
     import { Table } from "flowbite-svelte";
 
     const items = [
         {
+=======
+    import { Button, TableHead } from "flowbite-svelte";
+    import {
+        Table,
+        TableBody,
+        TableHeadCell,
+        TableBodyRow,
+        TableBodyCell,
+    } from "flowbite-svelte";
+
+    const items = [
+        {
+            id: "1",
+            type: "Type",
+            merchant: "Noel Crispin",
+            date: "26 December, 1:00 PM",
+            category: "Category",
+            amount: "0.00",
+        },
+        {
+            id: "2",
+>>>>>>> b76d1aa (Initial Commit)
             type: "Type",
             merchant: "Title",
             date: "26 December, 1:00 PM",
             category: "Category",
+<<<<<<< HEAD
             amount: "0.00",
+=======
+            amount: "200.00",
+>>>>>>> b76d1aa (Initial Commit)
         },
     ];
 </script>
@@ -25,11 +52,37 @@
         </div>
 
         <Table
+<<<<<<< HEAD
             {items}
             shadow
             hoverable
             class="shadow-md rounded-full border border-border-warm"
         ></Table>
+=======
+            shadow
+            hoverable
+            class="shadow-md rounded-full border border-border-warm"
+        >
+            <TableHead>
+                <TableHeadCell>Type</TableHeadCell>
+                <TableHeadCell>Merchant</TableHeadCell>
+                <TableHeadCell>Date</TableHeadCell>
+                <TableHeadCell>Category</TableHeadCell>
+                <TableHeadCell>Amount</TableHeadCell>
+            </TableHead>
+            <TableBody>
+                {#each items as item (item.id)}
+                    <TableBodyRow>
+                        <TableBodyCell>{item.type}</TableBodyCell>
+                        <TableBodyCell>{item.merchant}</TableBodyCell>
+                        <TableBodyCell>{item.date}</TableBodyCell>
+                        <TableBodyCell>{item.category}</TableBodyCell>
+                        <TableBodyCell>{item.amount}</TableBodyCell>
+                    </TableBodyRow>
+                {/each}
+            </TableBody>
+        </Table>
+>>>>>>> b76d1aa (Initial Commit)
 
         <div class="ml-2">
             <span class="text-xs"
