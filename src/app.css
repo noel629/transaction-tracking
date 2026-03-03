@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import 'tailwindcss';
+
+@plugin 'flowbite/plugin';
+
+@custom-variant dark ($where(.dark, .dark *));
+
+@theme {
+    /* Brand Colors */
+    --color-brand-bg: #F7F6F3;
+    --color-surface: #FFFFFF;
+    --color-surface-alt: #F0EEE9;
+    --color-border-warm: #E2DED8;
+
+    --color-tx-primary: #1A1814;
+    --color-tx-secondary: #6B6560;
+    --color-tx-tertiary: #A39E99;
+
+    --color-accent-blue: #2563EB;
+    --color-accent-green: #16A34A;
+    --color-accent-amber: #D97706;
+    --color-accent-red: #DC2626;
+
+    --color-pay-qr: #0891B2;
+    --color-pay-card: #7C3AED;
+    --color-pay-transfer: #EA580C;
+
+    /* Flowbite Primary mapped to Accent Blue (#2563EB is standard blue-600) */
+    --color-primary-50: #eff6ff;
+    --color-primary-100: #dbeafe;
+    --color-primary-200: #bfdbfe;
+    --color-primary-300: #93c5fd;
+    --color-primary-400: #60a5fa;
+    --color-primary-500: #3b82f6;
+    --color-primary-600: #2563eb;
+    --color-primary-700: #1d4ed8;
+    --color-primary-800: #1e40af;
+    --color-primary-900: #1e3a8a;
+
+    /* Flowbite Secondary */
+    --color-secondary-50: #f0f9ff;
+    --color-secondary-100: #e0f2fe;
+    --color-secondary-200: #bae6fd;
+    --color-secondary-300: #7dd3fc;
+    --color-secondary-400: #38bdf8;
+    --color-secondary-500: #0ea5e9;
+    --color-secondary-600: #0284c7;
+    --color-secondary-700: #0369a1;
+    --color-secondary-800: #075985;
+    --color-secondary-900: #0c4a6e;
+
+    /* Typography */
+    --font-display: "DM Serif Display", serif;
+    --font-body: "DM Sans", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+}
+
+@source '../node_modules/flowbite-svelte/dist';
+@source '../node_modules/flowbite-svelte-icons/dist';
+
+@layer base {
+    body {
+        background-color: var(--color-brand-bg);
+        color: var(--color-tx-primary);
+        font-family: var(--font-body);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-display);
+        color: var(--color-tx-primary);
+    }
+
+    span,
+    p {
+        color: var(--color-tx-secondary);
+    }
+}
