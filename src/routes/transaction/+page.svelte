@@ -1,11 +1,4 @@
 <script lang="ts">
-<<<<<<< HEAD
-    import { Button } from "flowbite-svelte";
-    import { Table } from "flowbite-svelte";
-
-    const items = [
-        {
-=======
     import { Button, TableHead } from "flowbite-svelte";
     import {
         Table,
@@ -26,16 +19,11 @@
         },
         {
             id: "2",
->>>>>>> b76d1aa (Initial Commit)
             type: "Type",
             merchant: "Title",
             date: "26 December, 1:00 PM",
             category: "Category",
-<<<<<<< HEAD
-            amount: "0.00",
-=======
             amount: "200.00",
->>>>>>> b76d1aa (Initial Commit)
         },
     ];
 </script>
@@ -52,13 +40,6 @@
         </div>
 
         <Table
-<<<<<<< HEAD
-            {items}
-            shadow
-            hoverable
-            class="shadow-md rounded-full border border-border-warm"
-        ></Table>
-=======
             shadow
             hoverable
             class="shadow-md rounded-full border border-border-warm"
@@ -82,7 +63,7 @@
                 {/each}
             </TableBody>
         </Table>
->>>>>>> b76d1aa (Initial Commit)
+        >>>>>>> b76d1aa (Initial Commit)
 
         <div class="ml-2">
             <span class="text-xs"
